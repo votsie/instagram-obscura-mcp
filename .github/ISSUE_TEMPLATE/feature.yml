@@ -1,0 +1,10 @@
+name: Feature request / Предложение
+description: Describe a concrete workflow and its value.
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow / Задача
+      description: What would this let you do? Include language requirements if relevant.
+    validations:
+      required: true

@@ -1,0 +1,27 @@
+# Local credentials and account data must never be published.
+.env
+.env.*
+!.env.example
+.venv/
+.work/
+.runtime/
+profile/
+profiles/
+jobs/
+uploads/
+models/
+*.log
+*.mp4
+*.wav
+*.mp3
+*.webm
+cookies*.json
+*storage-state*.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/

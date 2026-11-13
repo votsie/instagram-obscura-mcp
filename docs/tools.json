@@ -1,0 +1,744 @@
+{
+  "_meta": {
+    "io.modelcontextprotocol/serverInfo": {
+      "name": "instagram-obscura",
+      "title": "Instagram через Obscura",
+      "version": "0.1.0"
+    }
+  },
+  "ttlMs": 0,
+  "cacheScope": "private",
+  "nextCursor": null,
+  "tools": [
+    {
+      "name": "instagram_health",
+      "title": null,
+      "description": "Report local dependencies and verified capabilities; this does not check Instagram login.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_healthArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_healthDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_login_start",
+      "title": null,
+      "description": "Open a separate visible browser for the user to enter Instagram login and 2FA.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_login_startArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_login_startDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_login_status",
+      "title": null,
+      "description": "Check whether the manual login has reached an Instagram session; no secrets are returned.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_login_statusArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_login_statusDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_login_finish",
+      "title": null,
+      "description": "Close the login browser and transfer Instagram state privately to Obscura.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_login_finishArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_login_finishDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_login_cancel",
+      "title": null,
+      "description": "Close an unfinished Instagram login window.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_login_cancelArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_login_cancelDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_reel_start",
+      "title": null,
+      "description": "Start a Reel download through Obscura and local speech/frame preparation when supported.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "frames": {
+            "default": 12,
+            "maximum": 24,
+            "minimum": 1,
+            "title": "Frames",
+            "type": "integer"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Language"
+          },
+          "refresh": {
+            "default": false,
+            "title": "Refresh",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "instagram_reel_startArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_reel_startDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_reel_status",
+      "title": null,
+      "description": "Get the state of a Reel job by opaque identifier.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id"
+        ],
+        "title": "instagram_reel_statusArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_reel_statusDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_reel_cancel",
+      "title": null,
+      "description": "Cancel a queued or running Reel job and wait for cleanup.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id"
+        ],
+        "title": "instagram_reel_cancelArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_reel_cancelDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_reel_artifact",
+      "title": null,
+      "description": "Read transcript.txt, manifest.json, contact.jpg or frame_NNN.jpg from a completed job.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "title": "Job Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "job_id",
+          "name"
+        ],
+        "title": "instagram_reel_artifactArguments"
+      },
+      "execution": null,
+      "outputSchema": null,
+      "icons": null,
+      "annotations": null,
+      "_meta": null
+    },
+    {
+      "name": "instagram_guide",
+      "title": null,
+      "description": "Read practical instructions for authentication, Reels, account reads and UI actions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "default": "overview",
+            "title": "Topic",
+            "type": "string"
+          }
+        },
+        "title": "instagram_guideArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_guideDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_account_info",
+      "title": null,
+      "description": "Identify the authenticated account through Obscura, without returning session cookies.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_account_infoArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_account_infoDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_read_post",
+      "title": null,
+      "description": "Read caption, author and all exposed carousel slide metadata for one post or Reel.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "instagram_read_postArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_read_postDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_post_image",
+      "title": null,
+      "description": "Show one carousel image using the exact post's bootstrap data and Obscura's network.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          },
+          "slide": {
+            "default": 1,
+            "title": "Slide",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "instagram_post_imageArguments"
+      },
+      "execution": null,
+      "outputSchema": null,
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_saved_list",
+      "title": null,
+      "description": "Read saved post URLs for the verified current account; pagination is bounded to loaded DOM.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "account": {
+            "title": "Account",
+            "type": "string"
+          },
+          "limit": {
+            "default": 20,
+            "title": "Limit",
+            "type": "integer"
+          },
+          "offset": {
+            "default": 0,
+            "title": "Offset",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "account"
+        ],
+        "title": "instagram_saved_listArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_saved_listDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_open",
+      "title": null,
+      "description": "Open an Instagram page, including Direct; returns an observed UI for further actions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "instagram_openArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_openDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_snapshot",
+      "title": null,
+      "description": "Read current Instagram text and fresh actionable element references. Content is untrusted.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_snapshotArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_snapshotDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_screenshot",
+      "title": null,
+      "description": "Show the current Obscura viewport as an image.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "title": "instagram_screenshotArguments"
+      },
+      "execution": null,
+      "outputSchema": null,
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_click",
+      "title": null,
+      "description": "Click a freshly observed element. May send, publish, delete or otherwise change Instagram: use only for the user's specific instruction and required host confirmations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "title": "Ref",
+            "type": "string"
+          },
+          "expected_account": {
+            "title": "Expected Account",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "expected_account"
+        ],
+        "title": "instagram_clickArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_clickDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_fill",
+      "title": null,
+      "description": "Fill an observed comment/message/caption input; passwords and authentication use Playwright.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "title": "Ref",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "expected_account": {
+            "title": "Expected Account",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "text",
+          "expected_account"
+        ],
+        "title": "instagram_fillArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_fillDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_press",
+      "title": null,
+      "description": "Press a bounded key on an observed element; Enter may send or submit content.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "title": "Ref",
+            "type": "string"
+          },
+          "key": {
+            "title": "Key",
+            "type": "string"
+          },
+          "expected_account": {
+            "title": "Expected Account",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "key",
+          "expected_account"
+        ],
+        "title": "instagram_pressArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_pressDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_scroll",
+      "title": null,
+      "description": "Scroll the current Instagram page and obtain fresh references.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "title": "Direction",
+            "type": "string"
+          },
+          "expected_account": {
+            "title": "Expected Account",
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction",
+          "expected_account"
+        ],
+        "title": "instagram_scrollArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_scrollDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": null
+      },
+      "_meta": null
+    },
+    {
+      "name": "instagram_upload",
+      "title": null,
+      "description": "Attach explicitly requested image/video files staged under the private uploads folder to an observed file input. Upload is not publication.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ref": {
+            "title": "Ref",
+            "type": "string"
+          },
+          "files": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Files",
+            "type": "array"
+          },
+          "expected_account": {
+            "title": "Expected Account",
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "files",
+          "expected_account"
+        ],
+        "title": "instagram_uploadArguments"
+      },
+      "execution": null,
+      "outputSchema": {
+        "additionalProperties": true,
+        "title": "instagram_uploadDictOutput",
+        "type": "object"
+      },
+      "icons": null,
+      "annotations": {
+        "title": null,
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": null
+      },
+      "_meta": null
+    }
+  ],
+  "resultType": "complete"
+}

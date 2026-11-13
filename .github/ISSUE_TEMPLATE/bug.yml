@@ -1,0 +1,17 @@
+name: Bug report / Ошибка
+description: Report a reproducible problem without private account data.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / Что произошло?
+      description: Include expected behavior, OS, Python and Obscura versions. Redact all private data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction / Как повторить
+      description: Use synthetic examples. Never upload cookies, screenshots of private content or signed media URLs.
+    validations:
+      required: true
