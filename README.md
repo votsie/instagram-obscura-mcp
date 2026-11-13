@@ -120,3 +120,9 @@ CI does not log into Instagram. Real-engine tests use a separately installed bin
 Original code and documentation: [MIT](LICENSE). [Obscura](https://github.com/h4ckf0r0day/obscura), [Playwright](https://github.com/microsoft/playwright-python), [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk), [faster-whisper](https://github.com/SYSTRAN/faster-whisper) and FFmpeg make this possible. External software and model licenses are separate; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 Not affiliated with or endorsed by Instagram or Meta.
+
+## Website analytics and search visibility
+
+The project website uses free Cloudflare Web Analytics for page views, referrers and performance, with production-host restrictions and DNT/GPC opt-out. It does not track MCP users or Instagram content. Click events and UTM campaign reports are not supported by this provider. [Measurement details](docs/analytics.md).
+
+[Installation guide](https://votsie.github.io/instagram-obscura-mcp/installation/) · [Reel analysis guide](https://votsie.github.io/instagram-obscura-mcp/reels/) · [GitHub traffic](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Repository activity](https://github.com/votsie/instagram-obscura-mcp/pulse)

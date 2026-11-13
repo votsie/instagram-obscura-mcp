@@ -102,3 +102,9 @@ python scripts/check_public.py
 CI использует синтетические данные и не входит в Instagram. Сессии, видео, реальные транскрипты, модели и бинарники не входят в публичную поставку.
 
 Свой код и документация — [MIT](LICENSE). Лицензии зависимостей учитываются [отдельно](THIRD_PARTY_NOTICES.md). Проект не связан с Meta и не является официальным продуктом Instagram.
+
+## Аналитика сайта и поиск
+
+На сайте подключён бесплатный Cloudflare Web Analytics: посещения, источники и показатели загрузки. Счётчик работает только на опубликованном сайте и учитывает DNT/GPC. Пользователи MCP и содержимое Instagram не отслеживаются. Клики и отчёты UTM этот провайдер не поддерживает. [Подробности измерения](docs/ru/analytics.md).
+
+[Установка](https://votsie.github.io/instagram-obscura-mcp/ru/installation/) · [Разбор Reels](https://votsie.github.io/instagram-obscura-mcp/ru/reels/) · [Трафик GitHub](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Активность репозитория](https://github.com/votsie/instagram-obscura-mcp/pulse)

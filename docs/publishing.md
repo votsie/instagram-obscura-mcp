@@ -1,6 +1,6 @@
 # Release preparation
 
-The repository is staged locally for review. Creating a public GitHub repository, pushing the initial commit and deploying Pages require the owner's final approval.
+The initial repository and project site are public. This checklist documents preparation and approval for subsequent releases. Creating a public GitHub repository, pushing the initial commit and deploying Pages require the owner's final approval.
 
 ## Intended metadata
 
@@ -19,6 +19,6 @@ The repository is staged locally for review. Creating a public GitHub repository
 5. Enable GitHub Pages with GitHub Actions and run `Publish project pages` manually. Verify both locales, assets, canonical URLs and sitemap after deployment.
 6. Upload `docs/assets/hero.png` as a repository social preview using GitHub's repository settings if desired. There is no invented automatic REST endpoint for this setting.
 
-The site is fully static, with no analytics, tracking, remote fonts or JavaScript bundle. It uses a lossless WebP hero for the page, PNG for social metadata, descriptive alternatives, localized URLs, reciprocal hreflang, canonical links, a sitemap, robots.txt and matching SoftwareSourceCode JSON-LD.
+The site is static, with an optional production-only Cloudflare Web Analytics beacon, no remote fonts and no application JavaScript bundle. See analytics.md for what is measured. It uses a lossless WebP hero for the page, PNG for social metadata, descriptive alternatives, localized URLs, reciprocal hreflang, canonical links, a sitemap, robots.txt and matching SoftwareSourceCode JSON-LD.
 
 PyPI/MCP Registry publication, submissions to community directories and outreach are separate actions and are not claimed here. Do not create fake stars, downloads, reviews or compatibility badges.
