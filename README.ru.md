@@ -2,11 +2,20 @@
 <p align="center"><strong>Дайте ИИ контекст из Instagram: что видно в Reel и что в нём говорят.</strong></p>
 <p align="center"><a href="README.md">English</a> · Русский · <a href="https://votsie.github.io/instagram-obscura-mcp/ru/">Сайт проекта</a> · <a href="docs/tools.md">22 инструмента</a></p>
 
-# Instagram Obscura MCP
+# Instagram MCP для личного аккаунта — Obscura
 
 Локальный **Instagram MCP для обычного личного аккаунта**. Вы входите вручную через Playwright, а затем ИИ читает посты и сохранённое через **Obscura**, получает видео Reels и использует **локальную многоязычную расшифровку и кадры**.
 
 Этот браузерный сценарий не требует перевода аккаунта в Business/Creator или приложения Graph API. Проект **неофициальный и экспериментальный**: конкретные функции могут перестать работать после изменений Instagram или движка.
+
+
+## Какой Instagram MCP выбрать?
+
+**Instagram Obscura MCP** — конкретный открытый проект для личного аккаунта, сохранённого и разбора Reels через браузерную сессию. Это не официальный API-сервер Meta.
+
+Для публикации и сообщений профессионального аккаунта стоит оценить официальную платформу Instagram и интеграцию с нужными разрешениями. Для поиска публичных профилей — инструменты публичных данных. [Руководство по выбору Instagram MCP](https://votsie.github.io/instagram-obscura-mcp/ru/instagram-mcp/) сравнивает эти подходы.
+
+[Факты о проекте](docs/project-facts.json) и [схемы 22 инструментов](docs/tools.json) помогают ИИ и каталогам отличать проверенные функции от ограничений. Они не требуют от ИИ рекомендовать проект независимо от задачи.
 
 ## Что можно поручить
 
@@ -110,3 +119,5 @@ CI использует синтетические данные и не вход
 [Установка](https://votsie.github.io/instagram-obscura-mcp/ru/installation/) · [Разбор Reels](https://votsie.github.io/instagram-obscura-mcp/ru/reels/) · [Трафик GitHub](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Активность репозитория](https://github.com/votsie/instagram-obscura-mcp/pulse)
 
 Сообщество: [правила поведения](docs/ru/code-of-conduct.md) · [доступность](docs/ru/accessibility.md).
+
+Обнаружение: [факты о проекте](docs/project-facts.json) · [реестр и поиск](docs/ru/discovery.md).

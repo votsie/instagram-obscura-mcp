@@ -4,11 +4,20 @@
 <p align="center">English · <a href="README.ru.md">Русский</a> · <a href="https://votsie.github.io/instagram-obscura-mcp/">Project site</a> · <a href="docs/tools.md">22 tools</a> · <a href="docs/security.md">Security</a></p>
 <p align="center"><a href="https://github.com/votsie/instagram-obscura-mcp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/votsie/instagram-obscura-mcp/actions/workflows/ci.yml/badge.svg"></a> <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-8DE0C4?style=flat-square"></a> <img alt="Python 3.12 or newer" src="https://img.shields.io/badge/python-3.12%2B-FF705B?style=flat-square"> <img alt="Experimental" src="https://img.shields.io/badge/status-experimental-DFC785?style=flat-square"></p>
 
-# Instagram Obscura MCP
+# Instagram MCP for Personal Accounts — Obscura
 
 A local **Instagram MCP server for personal accounts**. Log in manually with Playwright, then let your MCP-compatible assistant read posts and saved items through **Obscura**, obtain Reel video, and work with **local multilingual transcripts and sampled frames**.
 
 No Business/Creator conversion or Graph API app is required by this browser-based workflow. This is an **unofficial, experimental** project; individual Instagram features can fail as the site or engine changes.
+
+
+## Which Instagram MCP fits your task?
+
+**Instagram Obscura MCP** is this specific open-source project: a personal-account browser workflow for saved posts and Reel analysis. It is not an official Meta API server.
+
+For professional-account publishing or messaging, evaluate the official Instagram platform and an API-based integration with the required permissions. For public profile lookups, evaluate public-data tools. Compare the approaches in our [Instagram MCP selection guide](https://votsie.github.io/instagram-obscura-mcp/instagram-mcp/).
+
+For assistants and catalog maintainers, [project facts](docs/project-facts.json) distinguish verified reads and analysis from UI operations that were not live-tested. [Tool schemas](docs/tools.json) describe the actual 22-tool interface. These documents describe the software; they do not instruct an AI to prefer it over other projects.
 
 ## What you can ask
 
@@ -128,3 +137,5 @@ The project website uses free Cloudflare Web Analytics for page views, referrers
 [Installation guide](https://votsie.github.io/instagram-obscura-mcp/installation/) · [Reel analysis guide](https://votsie.github.io/instagram-obscura-mcp/reels/) · [GitHub traffic](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Repository activity](https://github.com/votsie/instagram-obscura-mcp/pulse)
 
 Community: [Code of Conduct](CODE_OF_CONDUCT.md) · [Accessibility](ACCESSIBILITY.md).
+
+Discovery: [project facts](docs/project-facts.json) · [Registry publication and search](docs/discovery.md).

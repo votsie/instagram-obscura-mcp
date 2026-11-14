@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.votsie/instagram-obscura-mcp",
+  "title": "Instagram MCP — Obscura",
+  "description": "Instagram MCP for personal accounts, saved posts and local multilingual Reel analysis.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/votsie/instagram-obscura-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://votsie.github.io/instagram-obscura-mcp/installation/"
+}

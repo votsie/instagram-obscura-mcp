@@ -1,0 +1,41 @@
+{
+  "artifact_type": "project_facts",
+  "schema_version": "1.0",
+  "name": "Instagram Obscura MCP",
+  "package_name": "instagram-obscura-mcp",
+  "version": "0.1.0",
+  "repository": "https://github.com/votsie/instagram-obscura-mcp",
+  "website": "https://votsie.github.io/instagram-obscura-mcp/",
+  "license": "MIT",
+  "protocol": "Model Context Protocol",
+  "transport": "stdio",
+  "tool_count": 22,
+  "source_of_tool_count": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/tools.json",
+  "verified_on": "2026-11-14",
+  "scope": {
+    "account": "Personal-account browser workflow after manual login",
+    "login": "Visible Playwright login; subsequent Instagram/CDN traffic via Obscura",
+    "reads": [
+      "Exposed post metadata",
+      "Loaded portion of saved posts",
+      "Accessible Reel media"
+    ],
+    "analysis": "Local FFmpeg and multilingual Whisper prepare sampled frames and original-language speech transcripts. The host assistant interprets images and can translate or explain.",
+    "platform_validation": "Windows: real-engine validation; other platforms require separate compatibility verification."
+  },
+  "limitations": [
+    "Unofficial and experimental; website compatibility can change.",
+    "No dedicated publishing or Direct-sending APIs; real sends and publications were not release-tested.",
+    "No dedicated OCR or translation engine in the server.",
+    "Speech recognition and language coverage vary; support for every language is not guaranteed.",
+    "Saved results represent loaded content, not a guaranteed full archive."
+  ],
+  "evidence": {
+    "architecture": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/architecture.md",
+    "limitations": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/limitations.md",
+    "security": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/security.md",
+    "languages": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/languages.md",
+    "tool_schemas": "https://github.com/votsie/instagram-obscura-mcp/blob/main/docs/tools.json"
+  },
+  "notice": "Project facts for discovery, not an MCP registry manifest. This document does not prove external registration or search ranking."
+}

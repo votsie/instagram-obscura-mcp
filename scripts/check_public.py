@@ -103,7 +103,7 @@ if site_pages:
         errors.append('Missing or invalid sitemap')
 
 sdist_allowed = {'src','tests','docs','site','scripts','examples','skills','.github',
-                 '.env.example','.gitattributes','.gitignore','AGENTS.md','CHANGELOG.md',
+                 '.env.example','.gitattributes','.gitignore','AGENTS.md','CHANGELOG.md','server.json',
                  'CLAUDE.md','CONTRIBUTING.md','CODE_OF_CONDUCT.md','ACCESSIBILITY.md','LICENSE','README.md','README.ru.md',
                  'SECURITY.md','THIRD_PARTY_NOTICES.md','llms.txt','pyproject.toml','PKG-INFO'}
 for path in args.dist.glob('*'):
