@@ -34,7 +34,7 @@ packages = ["src/instagram_mcp"]
 only-include = [
   "src", "tests", "docs", "site", "scripts", "skills", "examples", ".github",
   "pyproject.toml", "README.md", "README.ru.md", "LICENSE", "AGENTS.md", "CLAUDE.md",
-  "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
+  "CHANGELOG.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "ACCESSIBILITY.md", "SECURITY.md", "THIRD_PARTY_NOTICES.md",
   "llms.txt", ".gitattributes", ".gitignore", ".env.example"
 ]
 exclude = [

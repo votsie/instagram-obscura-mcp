@@ -108,3 +108,5 @@ CI использует синтетические данные и не вход
 На сайте подключён бесплатный Cloudflare Web Analytics: посещения, источники и показатели загрузки. Счётчик работает только на опубликованном сайте и учитывает DNT/GPC. Пользователи MCP и содержимое Instagram не отслеживаются. Клики и отчёты UTM этот провайдер не поддерживает. [Подробности измерения](docs/ru/analytics.md).
 
 [Установка](https://votsie.github.io/instagram-obscura-mcp/ru/installation/) · [Разбор Reels](https://votsie.github.io/instagram-obscura-mcp/ru/reels/) · [Трафик GitHub](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Активность репозитория](https://github.com/votsie/instagram-obscura-mcp/pulse)
+
+Сообщество: [правила поведения](docs/ru/code-of-conduct.md) · [доступность](docs/ru/accessibility.md).

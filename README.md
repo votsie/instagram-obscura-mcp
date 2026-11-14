@@ -126,3 +126,5 @@ Not affiliated with or endorsed by Instagram or Meta.
 The project website uses free Cloudflare Web Analytics for page views, referrers and performance, with production-host restrictions and DNT/GPC opt-out. It does not track MCP users or Instagram content. Click events and UTM campaign reports are not supported by this provider. [Measurement details](docs/analytics.md).
 
 [Installation guide](https://votsie.github.io/instagram-obscura-mcp/installation/) · [Reel analysis guide](https://votsie.github.io/instagram-obscura-mcp/reels/) · [GitHub traffic](https://github.com/votsie/instagram-obscura-mcp/graphs/traffic) · [Repository activity](https://github.com/votsie/instagram-obscura-mcp/pulse)
+
+Community: [Code of Conduct](CODE_OF_CONDUCT.md) · [Accessibility](ACCESSIBILITY.md).

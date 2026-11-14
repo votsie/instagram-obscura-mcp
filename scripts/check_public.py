@@ -104,7 +104,7 @@ if site_pages:
 
 sdist_allowed = {'src','tests','docs','site','scripts','examples','skills','.github',
                  '.env.example','.gitattributes','.gitignore','AGENTS.md','CHANGELOG.md',
-                 'CLAUDE.md','CONTRIBUTING.md','LICENSE','README.md','README.ru.md',
+                 'CLAUDE.md','CONTRIBUTING.md','CODE_OF_CONDUCT.md','ACCESSIBILITY.md','LICENSE','README.md','README.ru.md',
                  'SECURITY.md','THIRD_PARTY_NOTICES.md','llms.txt','pyproject.toml','PKG-INFO'}
 for path in args.dist.glob('*'):
     if path.suffix=='.whl':

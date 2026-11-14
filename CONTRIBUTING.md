@@ -13,3 +13,5 @@ Never attach a real profile, account data, downloaded Reel, cookie file or model
 By contributing you agree to license your contribution under MIT. Third-party code must retain its original license and notices.
 
 Русский: описывайте конкретную проблему, используйте синтетические данные, обновляйте обе версии документации. Не прикладывайте cookies, личную переписку, сохранённое и видео из аккаунта.
+
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report accessibility barriers as described in [ACCESSIBILITY.md](ACCESSIBILITY.md).
